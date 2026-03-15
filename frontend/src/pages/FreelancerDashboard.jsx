@@ -140,7 +140,6 @@ export default function FreelancerDashboard() {
   const totalEarnings = myContracts
     .filter(c => c.status === "Paid")
     .reduce((sum, c) => sum + parseFloat(c.amount), 0);
-  const successRate = myContracts.length > 0 ? Math.round((completedContracts / myContracts.length) * 100) : 0;
 
   const handleAction = async ({ contract, action }) => {
     try {
